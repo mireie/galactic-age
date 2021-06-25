@@ -31,7 +31,14 @@ export class GalacticAge {
     return lifeExpect - this.solarAge;
   }
   yearsLeft(expectency) {
+    let yearsLeftArray = [];
+    planetYearLength.forEach(e => {
+      let expectedYears = expectency*earthYearDays/e;
+      let yearsRemain = expectedYears-this.solarAge*earthYearDays/e;
+      yearsLeftArray.push(yearsRemain.toFixed(2));
+    });
 
+    return yearsLeftArray;
   }
 
 }

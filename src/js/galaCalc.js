@@ -49,4 +49,9 @@ export class GalacticAge {
     return this;
   }
 
+  getPlanetAges() {
+    let planetAgesArray = [];
+    
+    return planetAgesArray;
+  }
 }

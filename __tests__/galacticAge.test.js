@@ -48,7 +48,7 @@ test('it will return information into the GalacticAge object', () => {
 
 test('it will return planet ages into an array', () => {
   let human = new GalacticAge(33);
-  expect(human.getPlanetAges()).toEqual([(137.5).toFixed(2),((53.25)toFixed(2)),((33.00).toFixed(2)),((17.55).toFixed(2)),((2.78).toFixed(2))])
+  expect(human.getPlanetAges()).toEqual([(137.5).toFixed(2),((53.25).toFixed(2)),((33.00).toFixed(2)),((17.55).toFixed(2)),((2.78).toFixed(2))]);
 
 });
 

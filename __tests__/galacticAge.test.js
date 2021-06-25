@@ -35,4 +35,10 @@ test('it will return years left on each planet in an Array based on life expecte
   expect(earthAge.yearsLeft(expectency)).toEqual([(175.00).toFixed(2),(67.74.toFixed(2)),(42.00.toFixed(2)),(22.34.toFixed(2)),(3.54.toFixed(2))]);
 });
 
+test('it will return years surpassed expetency on each planet in an Array based on life expectency input', () => {
+  earthAge = new GalacticAge(33);
+  const expectency = 25;
+  expect(earthAge.yearsLeft(expectency)).toEqual([(33.33).toFixed(2),(12.90.toFixed(2)),(8.00.toFixed(2)),(4.26.toFixed(2)),(0.67.toFixed(2))]);
+});
+
 });

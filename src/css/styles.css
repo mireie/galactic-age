@@ -28,3 +28,11 @@ body {
   font-size:2rem;
   padding:1rem;
 }
+.btn-primary:hover {
+  background-color:#DC6ACF ;
+  border-color:#DC6ACF;
+}
+.btn-primary {
+  background-color:#39375B;
+  border-color:#F5B0CB;
+}

@@ -1,7 +1,8 @@
+
 const planetYearLength = [
   87.66,
   226.46,
-  65.25,
+  365.25,
   686.67,
   4331.87,
   760.27,
@@ -59,10 +60,11 @@ export class GalacticAge {
   yearsLeft() {
     let yearsLeftArray = [];
     planetYearLength.forEach(e => {
-      let expectedYears =  parseFloat(this.expectancy) * planetYearLength[2] / e;
+      let expectedYears =  this.expectancy * planetYearLength[2] / e;
       let yearsRemain = expectedYears - this.solarAge * planetYearLength[2] / e;
       if (yearsRemain < 0) {
         yearsRemain *= -1;
+      
       }
       yearsLeftArray.push(yearsRemain.toFixed(2));
     });
@@ -81,5 +83,9 @@ export class GalacticAge {
       planetAgesArray.push((this.solarAge * planetYearLength[2] / e).toFixed(2));
     })
     return planetAgesArray;
+  }
+
+  deathSwap() {
+    
   }
 }

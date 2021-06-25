@@ -30,15 +30,13 @@ describe('GalacticAge', () => {
   });
 
   test('it will return years left on each planet in an Array based on life expectency input', () => {
-    earthAge = new GalacticAge(33);
-    const expectency = 75;
-    expect(earthAge.yearsLeft(expectency)).toEqual([175.00, 67.74, 42.00, 22.34, 3.54]);
+    earthAge = new GalacticAge(33,75);
+    expect(earthAge.yearsLeft()).toEqual(["175.00", "67.74", "42.00", "22.34", "3.54"]);
   });
 
   test('it will return years surpassed expetency on each planet in an Array based on life expectency input', () => {
-    earthAge = new GalacticAge(33);
-    const expectency = 25;
-    expect(earthAge.yearsLeft(expectency)).toEqual([33.33, 12.90, 8.00, 4.26, 0.67]);
+    earthAge = new GalacticAge(33,25);
+    expect(earthAge.yearsLeft(expectency)).toEqual(["33.33", "12.90", "8.00", "4.26", "0.67"]);
   });
 
   test('it will return information into the GalacticAge object', () => {
@@ -48,9 +46,13 @@ describe('GalacticAge', () => {
 
   test('it will return planet ages into an array', () => {
     let human = new GalacticAge(33);
-    expect(human.getPlanetAges()).toEqual([137.5, 53.22, 33.00, 17.55, 2.78]);
+    expect(human.getPlanetAges()).toEqual(["137.50", "53.22", "33.00", "17.55", "2.78"]);
 
   });
+  test ('it should swap the text if the age is over expectency', () => {
+    let human = new GalacticAge(33,12);
+    expect(human.deathSwap().toEqual("Years cheated death "))
+  })
 });
 
 describe('Planets', () => {

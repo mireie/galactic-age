@@ -8,8 +8,13 @@ $('#age-submit').click(function () {
   const age = $('#age').val();
   const expectancy = $('#expectancy').val();
   let input = new GalacticAge(age, expectancy);
-  let ages = input.getPlanetAges();
-  let deaths = input.yearsLeft();
+  let ages = [];
+  let deaths = [];
+  ages = input.getPlanetAges();
+  deaths = input.yearsLeft();
+  let deathSwapText = "";
+  deathSwapText = deathSwap();
+  }
   $(".no-input").hide();
   $(".output").show();
   $("#0age").text(ages[0]);

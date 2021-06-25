@@ -1,9 +1,30 @@
 body {
-  background-color: aqua;
+  background-color: #39375B;
 }
 .planet-results {
-  background-color: white;
+  background-color: #F5B0CB;
 }
 .output {
   display:none;
+}
+.no-input p {
+  text-align:center;
+}
+.output > ul > li {
+  font-size:1.5rem;
+  list-style-type:none;
+}
+.user-input {
+  background-color:#C4BBB8;
+}
+.header {
+  background-color:#DC6ACF;
+  color:#39375B;
+}
+.no-input {
+  display:flex;
+  margin:auto;
+  margin-top:1rem;
+  font-size:2rem;
+  padding:1rem;
 }

@@ -9,5 +9,9 @@ export class GalacticAge {
 
   getVenusAge() {
     return this.solarAge * 1.62;
+  
+  }
+  getMarsAge() {
+    return this.solarAge * .88;
   }
 }

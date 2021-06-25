@@ -4,11 +4,11 @@ export class GalacticAge {
     this.solarAge = parseFloat(solarAge);
   }
 
-  // getMercuryAge() {
-  //   const planetYearDays = .24 * earthYearDays;
-  //   const planetAge = this.solarAge * earthYearDays / planetYearDays;
-  //   return parseFloat(planetAge.toFixed(2));
-  // }
+  getMercuryAge() {
+    const planetYearDays = .24 * earthYearDays;
+    const planetAge = this.solarAge * earthYearDays / planetYearDays;
+    return parseFloat(planetAge.toFixed(2));
+  }
   // getVenusAge() {
   //   const planetYearDays = .62 * earthYearDays;
   //   const planetAge = this.solarAge * earthYearDays / planetYearDays;

@@ -28,5 +28,8 @@ export class GalacticAge {
     const lifeExpect = 72.56;
     return lifeExpect - this.solarAge;
   }
+  yearsLeft(expectency) {
+    
+  }
 
 }

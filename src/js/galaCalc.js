@@ -1,5 +1,5 @@
 const earthYearDays = 365.25;
-const planetYearLength = [87.66,226.46,365.25,686.67,4331.87];
+const planetYearLength = [87.66, 226.46, 365.25, 686.67, 4331.87];
 export class GalacticAge {
   constructor(solarAge) {
     this.solarAge = parseFloat(solarAge);
@@ -33,8 +33,11 @@ export class GalacticAge {
   yearsLeft(expectency) {
     let yearsLeftArray = [];
     planetYearLength.forEach(e => {
-      let expectedYears = expectency*earthYearDays/e;
-      let yearsRemain = expectedYears-this.solarAge*earthYearDays/e;
+      let expectedYears = expectency * earthYearDays / e;
+      let yearsRemain = expectedYears - this.solarAge * earthYearDays / e;
+      if (yearsRemain < 0) {
+        yearsRemain *= -1;
+      }
       yearsLeftArray.push(yearsRemain.toFixed(2));
     });
 

@@ -51,7 +51,9 @@ export class GalacticAge {
 
   getPlanetAges() {
     let planetAgesArray = [];
-    
+    planetYearLength.forEach(e => {
+      planetAgesArray.push((this.solarAge * planetYearLength[2] / e).toFixed(2));
+    })
     return planetAgesArray;
   }
 }

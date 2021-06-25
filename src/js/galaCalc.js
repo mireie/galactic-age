@@ -1,8 +1,10 @@
 const earthYearDays = 365.25;
+const planetYearLength = [87.66,226.46,365.25,686.67,4331.87];
 export class GalacticAge {
   constructor(solarAge) {
     this.solarAge = parseFloat(solarAge);
   }
+
 
   getMercuryAge() {
     const planetYearDays = .24 * earthYearDays;
@@ -29,7 +31,7 @@ export class GalacticAge {
     return lifeExpect - this.solarAge;
   }
   yearsLeft(expectency) {
-    
+
   }
 
 }

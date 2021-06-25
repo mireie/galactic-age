@@ -32,7 +32,7 @@ test('it will return years left on Earth', () => {
 test('it will return years left on each planet in an Array based on life expectency input', () => {
   earthAge = new GalacticAge(33);
   const expectency = 75;
-  expect(earthAge.yearsLeft(expectency)).toEqual([312.50,120.97,39.89,6.32]);
+  expect(earthAge.yearsLeft(expectency)).toEqual([175.00,67.74,42.00,22.34,3.54]);
 });
 
 });

@@ -8,14 +8,14 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  devtool: 'eval-source-map',  
-  devServer: {                
-    contentBase: './dist'      
+  devtool: 'eval-source-map',
+  devServer: {               
+    contentBase: './dist'    
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Haiku Checker',
+      title: 'Shape Tracker',
       template: './src/index.html',
       inject: 'body'
     })

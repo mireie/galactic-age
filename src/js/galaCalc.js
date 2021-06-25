@@ -6,4 +6,8 @@ export class GalacticAge {
   getMercuryAge() {
     return this.solarAge * 1.24;
   }
+
+  getVenusAge() {
+    return this.solarAge * 1.62;
+  }
 }

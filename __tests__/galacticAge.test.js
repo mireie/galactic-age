@@ -9,4 +9,9 @@ test('it will return mercury age', () => {
   expect(earthAge.getMercuryAge()).toEqual(40.92);
 });
 
+test('it will return Venus age', () => {
+  earthAge = new GalacticAge(33);
+  expect(earthAge.getVenusAge()).toEqual(53.46);
+});
+
 });

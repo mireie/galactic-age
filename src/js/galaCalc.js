@@ -14,11 +14,11 @@ export class GalacticAge {
     const planetAge = this.solarAge * earthYearDays / planetYearDays;
     return parseFloat(planetAge.toFixed(2));
   }
-  // getMarsAge() {
-  //   const planetYearDays = 1.88 * earthYearDays;
-  //   const planetAge = this.solarAge * earthYearDays / planetYearDays;
-  //   return parseFloat(planetAge.toFixed(2));
-  // }
+  getMarsAge() {
+    const planetYearDays = 1.88 * earthYearDays;
+    const planetAge = this.solarAge * earthYearDays / planetYearDays;
+    return parseFloat(planetAge.toFixed(2));
+  }
   // getJupiterAge() {
   //   const planetYearDays = 11.86 * earthYearDays;
   //   const planetAge = this.solarAge * earthYearDays / planetYearDays;

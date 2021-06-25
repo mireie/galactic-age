@@ -32,13 +32,13 @@ describe('GalacticAge', () => {
   test('it will return years left on each planet in an Array based on life expectency input', () => {
     earthAge = new GalacticAge(33);
     const expectency = 75;
-    expect(earthAge.yearsLeft(expectency)).toEqual([(175.00).toFixed(2), (67.74.toFixed(2)), (42.00.toFixed(2)), (22.34.toFixed(2)), (3.54.toFixed(2))]);
+    expect(earthAge.yearsLeft(expectency)).toEqual([175.00, 67.74, 42.00, 22.34, 3.54]);
   });
 
   test('it will return years surpassed expetency on each planet in an Array based on life expectency input', () => {
     earthAge = new GalacticAge(33);
     const expectency = 25;
-    expect(earthAge.yearsLeft(expectency)).toEqual([(33.33).toFixed(2), (12.90.toFixed(2)), (8.00.toFixed(2)), (4.26.toFixed(2)), (0.67.toFixed(2))]);
+    expect(earthAge.yearsLeft(expectency)).toEqual([33.33, 12.90, 8.00, 4.26, 0.67]);
   });
 
   test('it will return information into the GalacticAge object', () => {
@@ -48,7 +48,7 @@ describe('GalacticAge', () => {
 
   test('it will return planet ages into an array', () => {
     let human = new GalacticAge(33);
-    expect(human.getPlanetAges()).toEqual([(137.5).toFixed(2), ((53.22).toFixed(2)), ((33.00).toFixed(2)), ((17.55).toFixed(2)), ((2.78).toFixed(2))]);
+    expect(human.getPlanetAges()).toEqual([137.5, 53.22, 33.00, 17.55, 2.78]);
 
   });
 });

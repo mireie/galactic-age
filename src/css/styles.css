@@ -1,3 +1,9 @@
 body {
   background-color: aqua;
 }
+.planet-results {
+  background-color: white;
+}
+.output {
+  display:none;
+}

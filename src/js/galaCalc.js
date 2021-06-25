@@ -6,15 +6,15 @@ export class Planet {
     this.yearLength = yearLength;
   }
 }
-const Mercury = new Planet("Mercury",87.66);
-const Venus = new Planet("Venus",226.46);
-const Earth = new Planet("Earth",365.25);
-const Mars = new Planet("Mars",686.67);
-const Jupiter = new Planet("Jupiter",4331.87);
-const Saturn = new Planet("Saturn",10,760.27);
-const Uranus = new Planet("Uranus",30,684.65);
-const Neptune = new Planet("Neptune",60,189.55);
-const Pluto = new Planet("Pluto",90,797.50);
+const mercury = new Planet("Mercury",87.66);
+const venus = new Planet("Venus",226.46);
+const earth = new Planet("Earth",365.25);
+const mars = new Planet("Mars",686.67);
+const jupiter = new Planet("Jupiter",4331.87);
+const saturn = new Planet("Saturn",10,760.27);
+const uranus = new Planet("Uranus",30,684.65);
+const neptune = new Planet("Neptune",60,189.55);
+const pluto = new Planet("Pluto",90,797.50);
 
 export class GalacticAge {
   constructor(solarAge) {

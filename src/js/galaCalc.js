@@ -1,5 +1,12 @@
 const planetYearLength = [87.66, 226.46, 365.25, 686.67, 4331.87];
 
+export class Planet {
+  constructor(name, yearLength) {
+    this.name = name;
+    this.yearLength = yearLength;
+  }
+}
+
 export class GalacticAge {
   constructor(solarAge) {
     this.solarAge = parseFloat(solarAge);

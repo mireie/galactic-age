@@ -5,7 +5,6 @@ export class GalacticAge {
     this.solarAge = parseFloat(solarAge);
   }
 
-
   getMercuryAge() {
     const planetYearDays = .24 * earthYearDays;
     const planetAge = this.solarAge * earthYearDays / planetYearDays;
@@ -42,6 +41,10 @@ export class GalacticAge {
     });
 
     return yearsLeftArray;
+  }
+
+  galactiCalc() {
+    
   }
 
 }

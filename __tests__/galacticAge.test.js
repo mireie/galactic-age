@@ -41,4 +41,9 @@ test('it will return years surpassed expetency on each planet in an Array based 
   expect(earthAge.yearsLeft(expectency)).toEqual([(33.33).toFixed(2),(12.90.toFixed(2)),(8.00.toFixed(2)),(4.26.toFixed(2)),(0.67.toFixed(2))]);
 });
 
+test('it will return information into the GalacticAge object', () => {
+  let human = new GalacticAge(33);
+  expect(human.galactiCalc()).toEqual(human);
+});
+
 });

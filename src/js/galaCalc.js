@@ -1,17 +1,28 @@
+const earthYearDays = 365.25;
 export class GalacticAge {
   constructor(solarAge) {
     this.solarAge = parseFloat(solarAge);
   }
-  
-  getMercuryAge() {
-    return this.solarAge * 1.24;
-  }
 
+  getMercuryAge() {
+    let planetYearDays = .24 * earthYearDays;
+    let planetAge = this.solarAge * earthYearDays / planetYearDays;
+    return parseFloat(planetAge.toFixed(2));
+  }
   getVenusAge() {
-    return this.solarAge * 1.62;
-  
+    let planetYearDays = .62 * earthYearDays;
+    let planetAge = this.solarAge * earthYearDays / planetYearDays;
+    return parseFloat(planetAge.toFixed(2));
   }
   getMarsAge() {
-    return this.solarAge * .88;
+    let planetYearDays = 1.88 * earthYearDays;
+    let planetAge = this.solarAge * earthYearDays / planetYearDays;
+    return parseFloat(planetAge.toFixed(2));
   }
+  getJupiterAge() {
+    let planetYearDays = 11.86 * earthYearDays;
+    let planetAge = this.solarAge * earthYearDays / planetYearDays;
+    return parseFloat(planetAge.toFixed(2));
+  }
+
 }

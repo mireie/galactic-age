@@ -17,8 +17,9 @@ const neptune = new Planet("Neptune",60,189.55);
 const pluto = new Planet("Pluto",90,797.50);
 
 export class GalacticAge {
-  constructor(solarAge) {
+  constructor(solarAge, expectancy) {
     this.solarAge = parseFloat(solarAge);
+    this.expectancy = expectancy;
   }
 
   getMercuryAge() {
@@ -45,10 +46,10 @@ export class GalacticAge {
     const lifeExpect = 72.56;
     return lifeExpect - this.solarAge;
   }
-  yearsLeft(expectency) {
+  yearsLeft(expectancy) {
     let yearsLeftArray = [];
     planetYearLength.forEach(e => {
-      let expectedYears = expectency * planetYearLength[2] / e;
+      let expectedYears = expectancy * planetYearLength[2] / e;
       let yearsRemain = expectedYears - this.solarAge * planetYearLength[2] / e;
       if (yearsRemain < 0) {
         yearsRemain *= -1;
@@ -59,8 +60,8 @@ export class GalacticAge {
     return yearsLeftArray;
   }
 
-  galactiCalc(expectency) {
-    this.remain = this.yearsLeft(expectency);
+  galactiCalc(expectancy) {
+    this.remain = this.yearsLeft(expectancy);
     console.log(this);
     return this;
   }

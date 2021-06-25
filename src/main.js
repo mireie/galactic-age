@@ -6,7 +6,6 @@ import './css/styles.css';
 
 $('#age-submit').click(function () {
   const age = $('#age').val();
-  let human = new GalacticAge(age);
-  human.galactiCalc(25);
-  $("#output-age").html(age);
+  const expectancy = $('#expectancy').val()
+  let input = new GalacticAge(age, expectancy);
 });

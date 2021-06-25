@@ -9,9 +9,28 @@
 </head>
 
 <body>
-  <input class="form-control" type="number" name="age" id="age">
-  <div class="btn btn-primary" id="age-submit">Submit</div>
-  <div class="output">Your age is <span id="output-age"></span></div>
+  <div class="container">
+    <div class="row">
+      <div class="col"><h1>GalactiCal</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <form>
+          <div class="mb-3">
+            <input class="form-control" type="number" name="age" id="age">
+            <label for="age">Enter your age in years.</label>            
+          </div>
+          <div class="mb-3">
+            <input class="form-control" type="number" name="expectancy" id="expectancy">
+            <label for="expectancy">Enter your life expectancy.</label>            
+          </div>
+          <div class="btn btn-primary pl-3 pr-3 pt-1 pb-1" id="age-submit">Submit</div>
+        </form>
+        <div class="output">Your  age is <span id="output-age"></span></div>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
 
 </body>
 

@@ -51,7 +51,7 @@ describe('GalacticAge', () => {
   });
   test ('it should swap the text if the age is over expectency', () => {
     let human = new GalacticAge(33,12);
-    expect(human.deathSwap().toEqual("Years cheated death "))
+    expect(human.deathSwap()).toEqual("Years cheated death ");
   })
 });
 

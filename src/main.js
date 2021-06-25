@@ -13,8 +13,9 @@ $('#age-submit').click(function () {
   ages = input.getPlanetAges();
   deaths = input.yearsLeft();
   let deathSwapText = "";
-  deathSwapText = deathSwap();
-  }
+  deathSwapText = input.deathSwap();
+  $(".death-swap").text(deathSwapText);
+  
   $(".no-input").hide();
   $(".output").show();
   $("#0age").text(ages[0]);

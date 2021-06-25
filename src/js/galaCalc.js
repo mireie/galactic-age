@@ -81,11 +81,15 @@ export class GalacticAge {
     let planetAgesArray = [];
     planetYearLength.forEach(e => {
       planetAgesArray.push((this.solarAge * planetYearLength[2] / e).toFixed(2));
-    })
+    });
     return planetAgesArray;
   }
 
   deathSwap() {
-    
+    if (this.solarAge > this.expectancy) {
+      return "Years cheated death ";
+    } else {
+      return "Years left ";
+    }
   }
 }

@@ -24,9 +24,9 @@ test('it will return Jupiter age', () => {
   expect(earthAge.getJupiterAge()).toEqual(2.78);
 });
 
-// test('it will return years left on Earth', () => {
-//   earthAge = new GalacticAge(33);
-//   expect(earthAge.earthTimeLeft()).toEqual(39.56)
-// });
+test('it will return years left on Earth', () => {
+  earthAge = new GalacticAge(33);
+  expect(earthAge.earthTimeLeft()).toEqual(39.56)
+});
 
 });

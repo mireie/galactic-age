@@ -24,9 +24,9 @@ export class GalacticAge {
     const planetAge = this.solarAge * earthYearDays / planetYearDays;
     return parseFloat(planetAge.toFixed(2));
   }
-  // earthTimeLeft() {
-  //   const lifeExpect = 72.56;
-  //   return lifeExpect - this.solarAge;
-  // }
+  earthTimeLeft() {
+    const lifeExpect = 72.56;
+    return lifeExpect - this.solarAge;
+  }
 
 }

@@ -19,10 +19,10 @@ test('it will return Mars age', () => {
   expect(earthAge.getMarsAge()).toEqual(17.55);
 });
 
-// test('it will return Jupiter age', () => {
-//   earthAge = new GalacticAge(33);
-//   expect(earthAge.getJupiterAge()).toEqual(2.78);
-// });
+test('it will return Jupiter age', () => {
+  earthAge = new GalacticAge(33);
+  expect(earthAge.getJupiterAge()).toEqual(2.78);
+});
 
 // test('it will return years left on Earth', () => {
 //   earthAge = new GalacticAge(33);

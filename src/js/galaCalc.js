@@ -1,9 +1,9 @@
 export class GalacticAge {
   constructor(solarAge) {
-    this.solarAge = solarAge;
+    this.solarAge = parseFloat(solarAge);
   }
   
   getMercuryAge() {
-    return this.soalarAge * 1.24;
+    return this.solarAge * 1.24;
   }
 }

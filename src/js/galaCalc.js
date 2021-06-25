@@ -1,28 +1,28 @@
-const earthYearDays = 365.25;
 const planetYearLength = [87.66, 226.46, 365.25, 686.67, 4331.87];
+
 export class GalacticAge {
   constructor(solarAge) {
     this.solarAge = parseFloat(solarAge);
   }
 
   getMercuryAge() {
-    const planetYearDays = .24 * earthYearDays;
-    const planetAge = this.solarAge * earthYearDays / planetYearDays;
+    const planetYearDays = .24 * planetYearLength[2];
+    const planetAge = this.solarAge * planetYearLength[2] / planetYearDays;
     return parseFloat(planetAge.toFixed(2));
   }
   getVenusAge() {
-    const planetYearDays = .62 * earthYearDays;
-    const planetAge = this.solarAge * earthYearDays / planetYearDays;
+    const planetYearDays = .62 * planetYearLength[2];
+    const planetAge = this.solarAge * planetYearLength[2] / planetYearDays;
     return parseFloat(planetAge.toFixed(2));
   }
   getMarsAge() {
-    const planetYearDays = 1.88 * earthYearDays;
-    const planetAge = this.solarAge * earthYearDays / planetYearDays;
+    const planetYearDays = 1.88 * planetYearLength[2];
+    const planetAge = this.solarAge * planetYearLength[2] / planetYearDays;
     return parseFloat(planetAge.toFixed(2));
   }
   getJupiterAge() {
-    const planetYearDays = 11.86 * earthYearDays;
-    const planetAge = this.solarAge * earthYearDays / planetYearDays;
+    const planetYearDays = 11.86 * planetYearLength[2];
+    const planetAge = this.solarAge * planetYearLength[2] / planetYearDays;
     return parseFloat(planetAge.toFixed(2));
   }
   earthTimeLeft() {
@@ -32,8 +32,8 @@ export class GalacticAge {
   yearsLeft(expectency) {
     let yearsLeftArray = [];
     planetYearLength.forEach(e => {
-      let expectedYears = expectency * earthYearDays / e;
-      let yearsRemain = expectedYears - this.solarAge * earthYearDays / e;
+      let expectedYears = expectency * planetYearLength[2] / e;
+      let yearsRemain = expectedYears - this.solarAge * planetYearLength[2] / e;
       if (yearsRemain < 0) {
         yearsRemain *= -1;
       }
@@ -43,8 +43,10 @@ export class GalacticAge {
     return yearsLeftArray;
   }
 
-  galactiCalc() {
-    
+  galactiCalc(expectency) {
+    this.remain = this.yearsLeft(expectency);
+    console.log(this);
+    return this;
   }
 
 }

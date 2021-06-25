@@ -43,7 +43,7 @@ test('it will return years surpassed expetency on each planet in an Array based 
 
 test('it will return information into the GalacticAge object', () => {
   let human = new GalacticAge(33);
-  expect(human.galactiCalc()).toEqual(human);
+  expect(human.galactiCalc(75)).toEqual(human);
 });
 
 });

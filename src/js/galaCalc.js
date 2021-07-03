@@ -1,70 +1,25 @@
-
-const planetYearLength = [
-  87.66,
-  226.46,
-  365.25,
-  686.67,
-  4331.87,
-  760.27,
-  684.65,
-  189.55,
-  797.50
-];
-
 export class Planet {
   constructor(name, yearLength) {
     this.name = name;
     this.yearLength = yearLength;
   }
 }
-const mercury = new Planet("Mercury",87.66);
-const venus = new Planet("Venus",226.46);
-const earth = new Planet("Earth",365.25);
-const mars = new Planet("Mars",686.67);
-const jupiter = new Planet("Jupiter",4331.87);
-const saturn = new Planet("Saturn",10,760.27);
-const uranus = new Planet("Uranus",30,684.65);
-const neptune = new Planet("Neptune",60,189.55);
-const pluto = new Planet("Pluto",90,797.50);
-const planetArray = [mercury, venus, earth, mars, jupiter, saturn, uranus, neptune, pluto];
 
 export class GalacticAge {
   constructor(solarAge, expectancy) {
     this.solarAge = parseFloat(solarAge);
     this.expectancy = parseFloat(expectancy);
+    this.planetYears = [87.66, 226.46, 365.25, 686.67, 4331.87, 10760.27, 30684.65, 60189.55, 90797.50];
   }
-  getMercuryAge() {
-    const planetYearDays = .24 * planetArray[2].yearLength;
-    const planetAge = this.solarAge * planetArray[2].yearLength / planetYearDays;
-    return parseFloat(planetAge.toFixed(2));
-  }
-  getVenusAge() {
-    const planetYearDays = .62 * planetArray[2].yearLength;
-    const planetAge = this.solarAge * planetArray[2].yearLength / planetYearDays;
-    return parseFloat(planetAge.toFixed(2));
-  }
-  getMarsAge() {
-    const planetYearDays = 1.88 * planetArray[2].yearLength;
-    const planetAge = this.solarAge * planetArray[2].yearLength / planetYearDays;
-    return parseFloat(planetAge.toFixed(2));
-  }
-  getJupiterAge() {
-    const planetYearDays = 11.86 * planetArray[2].yearLength;
-    const planetAge = this.solarAge * planetArray[2].yearLength / planetYearDays;
-    return parseFloat(planetAge.toFixed(2));
-  }
-  earthTimeLeft() {
-    const lifeExpect = 72.56;
-    return lifeExpect - this.solarAge;
-  }
+
   yearsLeft() {
     let yearsLeftArray = [];
-    planetYearLength.forEach(e => {
-      let expectedYears =  this.expectancy * planetArray[2].yearLength / e;
-      let yearsRemain = expectedYears - this.solarAge * planetArray[2].yearLength / e;
+    this.planetYears.forEach(e => {
+      let expectedYears = this.expectancy * this.planetYears[2] / e;
+      let yearsRemain = expectedYears - this.solarAge * this.planetYears[2] / e;
       if (yearsRemain < 0) {
         yearsRemain *= -1;
-      
+
       }
       yearsLeftArray.push(yearsRemain.toFixed(2));
     });
@@ -72,15 +27,10 @@ export class GalacticAge {
     return yearsLeftArray;
   }
 
-  galactiCalc(expectancy) {
-    this.remain = this.yearsLeft(expectancy);
-    return this;
-  }
-
   getPlanetAges() {
     let planetAgesArray = [];
-    planetYearLength.forEach(e => {
-      planetAgesArray.push((this.solarAge * planetArray[2].yearLength / e).toFixed(2));
+    this.planetYears.forEach(e => {
+      planetAgesArray.push((this.solarAge * this.planetYears[2] / e).toFixed(2));
     });
     return planetAgesArray;
   }

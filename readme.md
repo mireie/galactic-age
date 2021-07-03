@@ -19,8 +19,9 @@ A program that will take an entered age and life expectancy and return how many 
 * Node.js is required, download and install https://nodejs.org/en/download/package-manager/
 * Create and enter a directory on your local machine for the project
 * Clone public repository from GitHub using `git clone https://github.com/mireie/galactic-age`
-* In the terminal, run `npm install`
+* To complete setup and retrieve required node modules, In the terminal, run `npm install`
 * To run the local server, in the terminal run `npm start`
+* To run tests with Jest, in the terminal run `npm run test`
 
 ## GitHub Links
 - [GitHub Repo](https://github.com/mireie/galactic-age)

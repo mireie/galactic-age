@@ -47,13 +47,3 @@ describe('GalacticAge', () => {
     expect(human3.deathSwap()).toEqual("Years left ");
   })
 });
-
-describe('Planets', () => {
-
-  test('it will store planet info in an object', () => {
-    let mercury = new Planet("Mercury", 87.66);
-    expect(mercury.name).toEqual("Mercury");
-    expect(mercury.yearLength).toBeDefined();
-
-  });
-});

@@ -1,10 +1,3 @@
-export class Planet {
-  constructor(name, yearLength) {
-    this.name = name;
-    this.yearLength = yearLength;
-  }
-}
-
 export class GalacticAge {
   constructor(solarAge, expectancy) {
     this.solarAge = parseFloat(solarAge);

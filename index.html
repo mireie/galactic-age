@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galactic Age</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col header">
+        <h1>GalactiCal</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 user-input">
+        <form>
+          <div class="m-3">
+            <input class="form-control" type="number" name="age" id="age">
+            <label for="age">Enter your age in years.</label>
+          </div>
+          <div class="m-3">
+            <input class="form-control" type="number" name="expectancy" id="expectancy">
+            <label for="expectancy">Enter your life expectancy.</label>
+          </div>
+          <div class="btn btn-primary pl-3 pr-3 pt-1 pb-1 m-3" id="age-submit">Submit</div>
+        </form>
+      </div>
+      <div class="col planet-results">
+        <div class="row">
+          <div class="no-input">
+            <p>Enter your age and life expectancy!</p>
+          </div>
+          <div class="output">
+            <ul>
+              <li>Mercury</li>
+              <ul>
+                <li>
+                  Your age: <span id="0age"></span>
+                </li>
+                <li>
+                  <span class="death-swap">Years left </span>on Mercury: <span id="0remaining"></span>
+                </li>
+              </ul>
+              <li>Venus</li>
+              <ul>
+                <li>
+                  Your age: <span id="1age"></span>
+                </li>
+                <li>
+                  <span class="death-swap">Years left </span>on Venus: <span id="1remaining"></span>
+                </li>
+              </ul>
+              <li>Earth</li>
+              <ul>
+                <li>
+                  Your age: <span id="2age"></span>
+                </li>
+                <li>
+                  <span class="death-swap">Years left </span>on Earth: <span id="2remaining"></span>
+                </li>
+              </ul>
+              <li>Mars</li>
+              <ul>
+                <li>
+                  Your age: <span id="3age"></span>
+                </li>
+                <li>
+                  <span class="death-swap">Years left </span>on Mars: <span id="3remaining"></span>
+                </li>
+              </ul>
+              <li>Jupiter</li>
+              <ul>
+                <li>
+                  Your age: <span id="4age"></span>
+                </li>
+                <li>
+                  <span class="death-swap">Years left </span>on Jupiter: <span id="4remaining"></span>
+                </li>
+              </ul>
+              <li>Saturn</li>
+              <ul>
+                <li>
+                  Your age: <span id="5age"></span>
+                </li>
+                <li>
+                  <span class="death-swap">Years left </span>on Saturn: <span id="5remaining"></span>
+                </li>
+              </ul>
+              <li>Uranus</li>
+              <ul>
+                <li>
+                  Your age: <span id="6age"></span>
+                </li>
+                <li>
+                  <span class="death-swap">Years left </span>on Uranus: <span id="6remaining"></span>
+                </li>
+              </ul>
+              <li>Neptune</li>
+              <ul>
+                <li>
+                  Your age: <span id="7age"></span>
+                </li>
+                <li>
+                  <span class="death-swap">Years left </span>on Neptune: <span id="7remaining"></span>
+                </li>
+              </ul>
+              <li>Pluto</li>
+              <ul>
+                <li>
+                  Your age: <span id="8age"></span>
+                </li>
+                <li>
+                  <span class="death-swap">Years left </span>on Pluto: <span id="8remaining"></span>
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script defer src="bundle.js"></script></body>
+
+</html>
